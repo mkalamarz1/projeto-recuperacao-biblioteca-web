@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Livros | Biblioteca Web</title>
+    <link rel="stylesheet" href="listagem-livro.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>BIBLIOTECA WEB</h1>
+        <span id="nomeUsuario"></span>
+    </header>
+
+    <div class="layout">
+        <aside class="menu">
+            <nav>
+                <a href="../dashboard/dashboard.html">Dashboard</a>
+                <a href="../cadastro-usuario/cadastro-usuario.html">Cadastro de Usuários</a>
+                <a href="../cadastro-livro/cadastro-livro.html">Cadastro de Livros</a>
+                <a href="listagem-livro.html">Listar Livros</a>
+                <a href="#" class="desabilitado" aria-disabled="true">Empréstimo</a>
+                <a href="#" class="desabilitado" aria-disabled="true">Devolução</a>
+                <button type="button" id="btnSair">Sair</button>
+            </nav>
+        </aside>
+
+        <main class="conteudo">
+            <h2>Livros cadastrados</h2>
+            <p>Confira a lista de livros da biblioteca.</p>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Categoria</th>
+                            <th>Páginas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaLivros">
+                        <tr>
+                            <td colspan="4">Carregando livros...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="mensagem" role="alert"></p>
+        </main>
+    </div>
+
+    <script type="module" src="listagem-livro.js"></script>
+</body>
+</html>

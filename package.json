@@ -1,0 +1,7 @@
+
+{
+  "name": "projeto-recuperacao-biblioteca-web",
+  "version": "1.0.0",
+  "description": "Sistema web para gerenciamento de uma biblioteca",
+  "type": "module"
+}

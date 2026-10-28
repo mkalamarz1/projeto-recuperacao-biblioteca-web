@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Biblioteca Web</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>BIBLIOTECA WEB</h1>
+        <span id="nomeUsuario"></span>
+    </header>
+
+    <div class="layout">
+        <nav class="menu-lateral">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="../cadastro-usuario/cadastro-usuario.html">Cadastro de Usuários</a>
+            <a href="../cadastro-livro/cadastro-livro.html">Cadastro de Livros</a>
+            <a href="../listagem-livro/listagem-livro.html">Listar Livros</a>
+            <button type="button" disabled>Realizar Empréstimo</button>
+            <button type="button" disabled>Realizar Devolução</button>
+            <button type="button" id="btnSair">Sair</button>
+        </nav>
+
+        <main class="conteudo">
+            <h2>Dashboard</h2>
+            <p>Visão geral do acervo da biblioteca.</p>
+
+            <section id="cardsEstatisticas" class="cards">
+                <article class="card">
+                    <h3>Total de livros</h3>
+                    <p id="totalLivros">0</p>
+                </article>
+
+                <article class="card">
+                    <h3>Livros disponíveis</h3>
+                    <p id="livrosDisponiveis">0</p>
+                </article>
+
+                <article class="card">
+                    <h3>Livros indisponíveis</h3>
+                    <p id="livrosIndisponiveis">0</p>
+                </article>
+
+                <article class="card">
+                    <h3>Total de páginas</h3>
+                    <p id="totalPaginas">0</p>
+                </article>
+
+                <article class="card">
+                    <h3>Média de páginas por livro</h3>
+                    <p id="mediaPaginas">0</p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

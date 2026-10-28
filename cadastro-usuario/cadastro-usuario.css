@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.cabecalho {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.cabecalho h1 {
+    font-size: 22px;
+}
+
+#nomeUsuario {
+    font-size: 14px;
+}
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 68px);
+}
+
+.menu-lateral {
+    background-color: #ffffff;
+    width: 240px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid #e2e8f0;
+}
+
+.menu-lateral a,
+.menu-lateral button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #334155;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-lateral a:hover,
+.menu-lateral button:not(:disabled):hover {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.menu-lateral button:disabled {
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+.conteudo h2 {
+    margin-bottom: 25px;
+}
+
+#formUsuario {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 20px;
+}
+
+#formUsuario label {
+    font-weight: bold;
+    font-size: 14px;
+    align-self: end;
+}
+
+#formUsuario input,
+#formUsuario select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+#formUsuario input:focus,
+#formUsuario select:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+#formUsuario h3 {
+    grid-column: 1 / -1;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#formUsuario button {
+    grid-column: 1 / -1;
+    padding: 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#formUsuario button:hover {
+    background-color: #1d4ed8;
+}
+
+#mensagem {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .conteudo {
+        padding: 20px 16px;
+    }
+
+    #formUsuario {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    #formUsuario h3,
+    #formUsuario button,
+    #mensagem {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
