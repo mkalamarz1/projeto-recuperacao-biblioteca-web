@@ -11,10 +11,11 @@ body {
     color: #1e293b;
 }
 
+/* Cabeçalho */
 .cabecalho {
     background-color: #1e3a8a;
     color: #ffffff;
-    padding: 20px 30px;
+    padding: 16px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,32 +30,37 @@ body {
     font-size: 14px;
 }
 
+/* Layout geral */
 .layout {
     display: flex;
+    flex-direction: column;
     min-height: calc(100vh - 68px);
 }
 
+/* Menu horizontal */
 .menu-lateral {
     background-color: #ffffff;
-    width: 240px;
-    padding: 20px 12px;
+    width: 100%;
+    padding: 12px 20px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-right: 1px solid #e2e8f0;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .menu-lateral a,
 .menu-lateral button {
-    display: block;
-    width: 100%;
-    padding: 12px;
+    display: inline-block;
+    width: auto;
+    padding: 12px 14px;
     border: none;
     border-radius: 6px;
     background-color: transparent;
     color: #334155;
     font-size: 14px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     cursor: pointer;
 }
@@ -70,8 +76,10 @@ body {
     cursor: not-allowed;
 }
 
+/* Conteúdo */
 .conteudo {
     flex: 1;
+    width: 100%;
     padding: 30px;
     min-width: 0;
 }
@@ -85,6 +93,7 @@ body {
     margin-bottom: 25px;
 }
 
+/* Cards de estatísticas */
 .cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -111,12 +120,14 @@ body {
     color: #1e3a8a;
 }
 
+/* Tablets */
 @media (max-width: 900px) {
     .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
+/* Celulares */
 @media (max-width: 600px) {
     .cabecalho {
         padding: 16px;
@@ -124,14 +135,15 @@ body {
         align-items: flex-start;
     }
 
-    .layout {
-        flex-direction: column;
+    .menu-lateral {
+        padding: 10px;
+        gap: 4px;
     }
 
-    .menu-lateral {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #e2e8f0;
+    .menu-lateral a,
+    .menu-lateral button {
+        padding: 10px;
+        font-size: 13px;
     }
 
     .conteudo {

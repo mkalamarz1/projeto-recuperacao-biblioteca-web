@@ -14,17 +14,16 @@
     </header>
 
     <div class="layout">
-        <aside class="menu">
-            <nav>
-                <a href="../dashboard/dashboard.html">Dashboard</a>
-                <a href="../cadastro-usuario/cadastro-usuario.html">Cadastro de Usuários</a>
-                <a href="../cadastro-livro/cadastro-livro.html">Cadastro de Livros</a>
-                <a href="listagem-livro.html">Listar Livros</a>
-                <a href="#" class="desabilitado" aria-disabled="true">Empréstimo</a>
-                <a href="#" class="desabilitado" aria-disabled="true">Devolução</a>
-                <button type="button" id="btnSair">Sair</button>
-            </nav>
-        </aside>
+        <nav class="menu-lateral">
+            <a href="../dashboard/dashboard.html">Dashboard</a>
+            <a href="../cadastro-usuario/cadastro-usuario.html">Cadastro de Usuários</a>
+            <a href="../cadastro-livro/cadastro-livro.html">Cadastro de Livros</a>
+            <a href="listagem-livro.html" class="ativo">Listar Livros</a>
+
+            <button type="button" disabled>Realizar Empréstimo</button>
+            <button type="button" disabled>Realizar Devolução</button>
+            <button type="button" id="btnSair">Sair</button>
+        </nav>
 
         <main class="conteudo">
             <h2>Livros cadastrados</h2>
@@ -40,6 +39,7 @@
                             <th>Páginas</th>
                         </tr>
                     </thead>
+
                     <tbody id="listaLivros">
                         <tr>
                             <td colspan="4">Carregando livros...</td>
@@ -55,3 +55,4 @@
     <script type="module" src="listagem-livro.js"></script>
 </body>
 </html>
+

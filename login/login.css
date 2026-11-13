@@ -18,10 +18,11 @@ body {
 .login-container {
     background-color: #ffffff;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     padding: 35px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #1e3a8a;
 }
 
 #formLogin {
@@ -30,7 +31,7 @@ body {
     gap: 12px;
 }
 
-h1 {
+#formLogin h1 {
     color: #1e3a8a;
     text-align: center;
     font-size: 28px;
@@ -42,12 +43,12 @@ h1 {
     margin-bottom: 15px;
 }
 
-label {
+#formLogin label {
     color: #334155;
     font-weight: bold;
 }
 
-input {
+#formLogin input {
     width: 100%;
     padding: 12px;
     border: 1px solid #cbd5e1;
@@ -55,12 +56,12 @@ input {
     font-size: 16px;
 }
 
-input:focus {
+#formLogin input:focus {
     outline: 2px solid #2563eb;
     border-color: #2563eb;
 }
 
-button {
+#formLogin button {
     padding: 12px;
     background-color: #2563eb;
     color: #ffffff;
@@ -69,23 +70,24 @@ button {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-button:hover {
+#formLogin button:hover {
     background-color: #1d4ed8;
 }
 
-a {
+#formLogin a {
     color: #2563eb;
     text-align: center;
     text-decoration: none;
 }
 
-a:hover {
+#formLogin a:hover {
     text-decoration: underline;
 }
 
-#mensagem {
+#formLogin #mensagem {
     color: #dc2626;
     font-size: 14px;
     text-align: center;
@@ -96,7 +98,7 @@ a:hover {
         padding: 25px 20px;
     }
 
-    h1 {
+    #formLogin h1 {
         font-size: 24px;
     }
 }
