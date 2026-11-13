@@ -135,6 +135,20 @@ formulario.addEventListener("submit", async (evento) => {
             "Preencha todos os campos obrigatórios.";
         return;
     }
+     
+         // Valida se CPF e telefone possuem somente números.
+    const cpfNumerico = /^\d+$/.test(dados.cpf);
+    const telefoneNumerico = /^\d+$/.test(dados.telefone);
+
+    if (!cpfNumerico) {
+        mensagem.textContent = "O CPF deve conter somente números.";
+        return;
+    }
+
+    if (!telefoneNumerico) {
+        mensagem.textContent = "O telefone deve conter somente números.";
+        return;
+    }
 
     try {
         const novoUsuario = new Usuario(dados);
